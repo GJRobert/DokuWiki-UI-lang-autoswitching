@@ -28,7 +28,7 @@ if (count($conf['lang_enabled'])==0) $conf['lang_enabled'] = $supportedLanguages
 
 // Set default language to the user agents most favorite one
 $languages = explode(',', preg_replace('/(;q=\d+.\d+)/i', '', getenv('HTTP_ACCEPT_LANGUAGE'))); 
-foreach ($languages as $lang) if (in_array($lang, $conf['lang_enabled'])) {
+foreach ($languages as $lang) if (in_array(strtolower($lang), $conf['lang_enabled'])) {
     $conf['lang'] = $lang;
     break;
 }
