@@ -1,0 +1,1 @@
+# DokuWiki-UI-lang-autoswitching
